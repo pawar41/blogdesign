@@ -1,0 +1,60 @@
+@use "../util" as *;
+
+.header {
+    display: flex;
+    max-width: 100%;
+    padding: 0 rem(40);
+    justify-content: space-between;
+
+    color: var(--head-font);
+    font-display: swap;
+    background-color: var(--head-bg);
+
+    align-items: center;
+
+    @include breakpoint(large) {
+        
+    }
+
+    &__brandlogo { 
+        &__title {
+            font-size: rem(32);
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+    &__navmenu {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        @include breakpoint(medium) {
+            //display: flex;
+            font-size: rem(15);
+            flex-direction: row;
+        }
+
+        &__container {
+            padding-right: rem(22) ;
+            font-weight: 500;
+        }
+
+        &__container:hover {
+            color: var(--head-hover);
+            //font-weight: 700;
+        }
+    }
+}
+/* 
+.container {
+    max-width: rem(1110);
+    padding: 0 rem(25);
+    margin: 0 auto rem(42) ;
+
+    @include breakpoint(large) {
+        padding: 0;
+    }
+}
+
+*/

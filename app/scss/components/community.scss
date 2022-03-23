@@ -1,0 +1,29 @@
+@use "../util" as *;
+
+.community {
+
+    &__title {
+        color: var(--head-bg);
+    }
+
+    &__gridparent {
+        color: var(--head-bg);
+        //background-color: var(--head-bg);
+
+        display: grid;
+        line-height: 2.2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 10px 10px;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+
+        @include breakpoint(large) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+}
+

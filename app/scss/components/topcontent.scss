@@ -1,0 +1,29 @@
+@use "../util" as *;
+
+.content__top {
+        
+
+         @include breakpoint(medium) {
+
+                &__description {
+                        grid-column: 1 / 2;
+
+                        &__title {
+                                font-weight: 700;
+                        }
+
+                        &__shlogan {
+                                font-weight: 500;
+                        }
+
+                }
+                &__img {
+                        grid-column: 2 / 3;
+                }
+        }
+
+        &__img img {
+                width: 100%;
+        }
+        
+}

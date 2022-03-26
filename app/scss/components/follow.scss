@@ -1,0 +1,53 @@
+@use "../util" as *;
+
+.followem {
+    
+    &__grid {
+    line-height: 2.2;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+
+    gap: 10px 10px;
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        }
+    }
+
+    &__pad {
+        padding-top: rem(32);
+    }
+
+    &__bgheight {
+        height: 100%;
+    }
+
+    &__gridcontainer{
+        height: rem(75);
+
+        a{
+            display: grid;
+            height: 75%;
+
+            grid-template-columns: 45% 55%;
+            grid-template-rows: repeat(1, 1fr);
+            gap: rem(10);
+
+            .grid__container__logo svg{
+                padding-top: 1.6%;
+                height: 80%;
+                width: auto;
+                float: right;
+            }
+
+            .grid__container__tile {
+                
+                align-self: center;
+                text-align: start;
+                font-size: rem(18);
+            }
+        }
+    }
+}

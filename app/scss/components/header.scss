@@ -123,6 +123,10 @@
 
         }
 
+        &__menu > li:nth-last-child(1) {
+            //height: rem(5);
+        }
+
         &__menu {
             padding-top: rem(20);
             transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -152,7 +156,10 @@
         width: 100%;
         //border-radius: rem(2);
         background-color: rgba(255, 255, 255, 0.75);
+        
     }
+
+    
 
     #header__navmenu__toggle:checked ~ .header__navmenu__menu li:nth-child(1) {
         border-top: rem(0.1) solid var(--head-border);
@@ -161,6 +168,7 @@
     #header__navmenu__toggle:checked ~ .header__navmenu__menu {
         display: flex;
     }
+
 
     @include breakpoint(medium) {
         &__navmenu {

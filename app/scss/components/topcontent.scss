@@ -1,19 +1,39 @@
 @use "../util" as *;
 
 .content__top {
-        
+
+        &__description {
+
+                 &__title {
+                        font-weight: 700;
+                        }
+
+                &__shlogan {
+                        font-size: rem(20);   
+                        
+                        & span {
+                                display: block;
+                                padding: rem(10) 0;
+
+                        }
+                }
+        }
 
          @include breakpoint(medium) {
 
                 &__description {
                         grid-column: 1 / 2;
 
-                        &__title {
-                                font-weight: 700;
-                        }
-
                         &__shlogan {
+                                font-size: rem(24);                      
                                 font-weight: 500;
+                                //font-size: rem(44);
+                                
+                                & span {
+                                        display: block;
+                                        padding: rem(40) 0 rem(20) 0;
+
+                                }
                         }
 
                 }
